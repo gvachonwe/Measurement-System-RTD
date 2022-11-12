@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <LiquidCrystal.h>
 
 // Define global variables
 int ThermPin = 0;
@@ -7,9 +8,17 @@ float R1 = 10000;
 float logR2, R2, T, Tcel;
 float c1 = 1.009249522e-03, c2 = 2.378405444e-04, c3 = 2.019202697e-07;
 
+// Initialize LCD
+LiquidCrystal lcd(0, 1, 8, 9, 10, 11);
+
 void setup() {
   // Start serial monitor + set speed
-  Serial.begin(9600);
+  //Serial.begin(9600);
+
+  // Start LCD
+  delay(1000);
+  lcd.begin(16, 2);
+  lcd.clear();
 }
 
 void loop() {
@@ -27,9 +36,15 @@ void loop() {
   Tcel = T - 273.15;
 
   // Print to serial monitor
-  Serial.print("Temperature: "); 
-  Serial.print(Tcel);
-  Serial.println(" C");   
+  //Serial.print("Temperature: "); 
+  //Serial.print(Tcel);
+  //Serial.println(" C");   
+
+  // Output to LCD
+  lcd.setCursor(0,1);
+  lcd.print("Temp; ");
+  lcd.print(Tcel);
+  lcd.print(" C");
 
   delay(500);
 }
