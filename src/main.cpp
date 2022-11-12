@@ -26,7 +26,7 @@ void loop() {
   // Convert analog signal to voltage
   V = Vo*(5.0/1023);
 
-  // Convert coltage to temp
+  // Convert voltage to temp
 
   // Print to serial monitor
   //Serial.print("Voltage: "); 
