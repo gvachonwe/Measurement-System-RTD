@@ -42,7 +42,7 @@ void loop() {
 
   // Output to LCD
   lcd.setCursor(0,1);
-  lcd.print("Temp; ");
+  lcd.print("Temp: ");
   lcd.print(Tcel);
   lcd.print(" C");
 

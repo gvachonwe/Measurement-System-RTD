@@ -34,7 +34,7 @@ void loop() {
   //Serial.println(" V");
 
   lcd.setCursor(0,1);
-  lcd.print("Voltage; ");
+  lcd.print("Voltage: ");
   lcd.print(V);
   lcd.print(" V");
 
