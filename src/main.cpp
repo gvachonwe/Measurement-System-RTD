@@ -5,8 +5,6 @@
 int Vo;
 float V = 0.0;
 float T = 0.0;
-float R1 = 10000.0;
-float R2 = 10000.0;
 
 // Initialize LCD
 LiquidCrystal lcd(0, 1, 8, 9, 10, 11);
