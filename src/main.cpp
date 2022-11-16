@@ -24,7 +24,8 @@ void loop() {
   V = Vo*(5.0/1023);
 
   // Convert voltage to temp
-  T = (131.5*V) - 333.78;
+  //T = (131.5*V) - 333.78;
+  T = (109.63*V) - 300.27;
 
   lcd.setCursor(0,0);
   lcd.print("Voltage: ");
